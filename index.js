@@ -4,7 +4,13 @@ const parser = require('body-parser')
 const cors = require('cors')
 const app = express()
 
-//add routers 
-
 app.use(parser.json())
 app.use(cors())
+
+//add routers 
+app.get('/', (req, res)=>{
+    res.send("index working")
+})
+
+
+app.listen(PORT, () => console.log('workit coder!', PORT))
