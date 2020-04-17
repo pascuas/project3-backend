@@ -10,12 +10,6 @@ if(process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/#######DBNAME"
 }
 
-app.set("port", process.env.PORT || 8080);
-
-app.listen(app.get("port"), () => {
-  console.log(`✅ PORT: ${app.get("port")} 🌟`);
-});
-
 module.exports = mongoose
 
 // heroku config:set ....
