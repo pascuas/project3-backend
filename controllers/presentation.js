@@ -1,4 +1,4 @@
-const Presentation = require('../models/Presentation')
+const Presentation = require('../models/presentation')
 
 const getAll = (req, res) => {
     Presentation.find().then(prez => res.json(prez)).then(()=> process.exit())
