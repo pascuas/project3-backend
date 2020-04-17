@@ -1,6 +1,6 @@
 # Best Timer Ever ⏱️
 ## Description
-Ever been in a meeting where you just want to tell the speaker -- we get the point! Well, here is a  multi-purpose timer to keep one right on time and reaching their talking points in adequate time. Our responsive web application incorporates a form to let a user add talking points, notes, and the time allotted to that point. Once the user has included all their talking points, the application will calculate the total amount of time. The user can then start a timer, which displays the talking point the user should be at.
+Ever been in a meeting where you just want to tell the speaker -- we get the point! Well, here is a  multi-purpose timer to keep one right on time and reaching their talking points in adequate time. Our responsive web application helps out presenters by displaying an outline of their presentation and providing a timer to keep them on track. This app can be used by keynote speakers, instructors, radio show hosts, and/or anyone that needs to present information in a timely manner. It incorporates a form to let a user add his presentation. In the form, the presenter can add sections with talking points and the time allotted to that section. Once the user has included all their sections, the application will calculate the total amount of time. The user can then start a timer, which then will display the section the presenter should be at during that time.  
 ### Project Links
 - Back end git
 - Front end git
@@ -10,7 +10,7 @@ Ever been in a meeting where you just want to tell the speaker -- we get the poi
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Git management | H | 2hrs | -hrs | -hrs |
+| Git management | H | 8hrs | -hrs | -hrs |
 | Q&A and bug fixes | H | 2hrs | -hrs | -hrs |
 | Connection | H | 0.5hrs | -hrs | -hrs |
 | Express  | H | 0.5hrs | -hrs | -hrs |
