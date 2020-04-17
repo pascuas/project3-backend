@@ -81,6 +81,9 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
     - Form - notes, about, talking points
 - Presentation Page
     - Has a timer and shows talking points and countdown
+    - Ability to edit & delete
+- Update Presentation Page
+    - Form - can change section titles, talking points, and time
 - Light / Dark -- usecontext
 ## Additional Libraries
 - Bootstrap
