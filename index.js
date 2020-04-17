@@ -3,13 +3,13 @@ const PORT = process.env.PORT || 3000
 const parser = require('body-parser')
 const cors = require('cors')
 const app = express()
-const presRoute = require ('./routes/presRoute')
+const presRoutes = require ('./routes/presRoutes')
 
 app.use(parser.json())
 app.use(cors())
 
 //add routers 
-app.use('/presentations', presRoute)
+app.use('/presentations', presRoutes)
 
 // app.get('/', (req, res)=>{
 //     res.send("index working")
