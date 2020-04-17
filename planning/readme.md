@@ -5,7 +5,10 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 - [Back end git](https://github.com/pascuas/project3-backend) 
 - [Front end git](https://github.com/alyssariah/project3-frontend)
 ### Wireframes and Architecture
-- Wireframes: [Figma](https://www.figma.com/file/YYKI41CzLE6mq3nKCqlpzO/Best-Meeting-Timer?node-id=0%3A1)
+- Wireframes: 
+     -[Landing page and create new](https://res.cloudinary.com/mzprizm/image/upload/v1587159783/Screen_Shot_2020-04-17_at_2.41.10_PM_rfu3r2.png)
+     - [Schema and updating](https://res.cloudinary.com/mzprizm/image/upload/v1587159783/Screen_Shot_2020-04-17_at_2.41.29_PM_qhxewr.png)
+     - [During the presentation](https://res.cloudinary.com/mzprizm/image/upload/v1587159783/Screen_Shot_2020-04-17_at_2.41.21_PM_c6timx.png)
 - Architecture: [Google Drawing](https://docs.google.com/drawings/d/1QnfQrfsA5B_Z0-H4OkIHzYKonrOfJGI1wSDYNjucwVM/edit)
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
