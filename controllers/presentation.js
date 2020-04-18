@@ -16,7 +16,7 @@ const update = (req, res) => {
 }
 
 const remove = (req, res) => {
-    Presentation.remove(req.params.id).then(prez => res.json(prez))
+    Presentation.remove({_id: req.params.id}).then(prez => res.json(prez))
 }
 
 module.exports = {
