@@ -12,8 +12,8 @@ app.use(cors())
 
 //add routers 
 app.use('/pres', presRoutes)
-app.use('/pres/sections', sectionRoutes)
-app.use('/pres/talkpoint', talkingPoint)
+app.use('/sections', sectionRoutes)
+app.use('/talkpoint', talkingPoint)
 
 // app.get('/', (req, res)=>{
 //     res.send("index working")
