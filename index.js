@@ -4,12 +4,16 @@ const parser = require('body-parser')
 const cors = require('cors')
 const app = express()
 const presRoutes = require ('./routes/presRoutes')
+const sectionRoutes = require ('./routes/sectionRoutes')
+const talkingPoint = require ('./routes/talkingPoint')
 
 app.use(parser.json())
 app.use(cors())
 
 //add routers 
-app.use('/presentations', presRoutes)
+app.use('/pres', presRoutes)
+app.use('/pres/sections', sectionRoutes)
+app.use('/pres/talkpoint', talkingPoint)
 
 // app.get('/', (req, res)=>{
 //     res.send("index working")
