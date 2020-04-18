@@ -1,6 +1,6 @@
 const Talkingpoints = require('../models/presentation')
 
-//marshall was here
+
 const getAll = (req, res) => {
     Talkingpoints.TalkingPoint.find({}).then(talkingpoints=>{
         res.json(talkingpoints)
