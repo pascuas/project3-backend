@@ -24,6 +24,10 @@ const addSection = (req, res) => {
         prez.save()
         res.json(prez)
     }))
+
+ 
+
+
 }
 
 module.exports = {

@@ -5,9 +5,10 @@ const sectionController = require('../controllers/section')
 
 router.get('/', sectionController.getAll)
 router.get('/:id', sectionController.getById)
-// get by Presentation
 router.post('/', sectionController.create)
 router.put('/:id', sectionController.update)
 router.delete('/:id', sectionController.remove)
+router.put('/addpoint/:id', sectionController.addTalkingPoint)
+
 
 module.exports = router;
