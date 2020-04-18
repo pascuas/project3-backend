@@ -2,11 +2,11 @@ const mongoose = require('../connection')
 const Schema = mongoose.Schema
 
 
-const TalkingPoints = new Schema ({
+const TalkingPointSchema = new Schema ({
     "point": String
 })
 
-const Section = new Schema({
+const SectionSchema = new Schema({
     "title": String,
     "time": Number,
     "talking_points": [TalkingPoints]
@@ -18,4 +18,9 @@ const PresentationSchema = new Schema({
 })
 
 const Presentation = mongoose.model('User', PresentationSchema)
-module.exports= Presentation
+const Section = mongoose.model('Section', SectionSchema)
+const TalkingPoint = mongoose.model('Talkingpoint', TalkingPointSchema)
+module.exports= {
+    Presentation,
+    Section,
+    TalkingPoint}
