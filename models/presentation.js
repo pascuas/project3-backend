@@ -9,12 +9,12 @@ const TalkingPointSchema = new Schema ({
 const SectionSchema = new Schema({
     "title": String,
     "time": Number,
-    "talking_points": [TalkingPoints]
+    "talking_points": [TalkingPointSchema]
 })
 
 const PresentationSchema = new Schema({
     "name": String,
-    "sections": [Section]
+    "sections": [SectionSchema]
 })
 
 const Presentation = mongoose.model('User', PresentationSchema)
@@ -23,4 +23,5 @@ const TalkingPoint = mongoose.model('Talkingpoint', TalkingPointSchema)
 module.exports= {
     Presentation,
     Section,
-    TalkingPoint}
+    TalkingPoint
+}
