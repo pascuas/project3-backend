@@ -9,7 +9,7 @@ router.post('/', presController.create)
 router.put('/:id', presController.update)
 router.delete('/:id', presController.remove)
 
-router.post('/addsection/:id', presController.addSection)
+router.put('/addsection/:id', presController.addSection)
 
 
 module.exports = router;

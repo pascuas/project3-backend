@@ -18,11 +18,19 @@ const update = (req, res) => {
 const remove = (req, res) => {
     Presentation.Presentation.remove({_id: req.params.id}).then(prez => res.json(prez))
 }
+const addSection = (req, res) => {
+    Presentation.Presentation.findById(req.params.id).then(prez => Presentation.Section.create(req.body).then(sect =>{
+        prez.sections.push(sect)
+        prez.save()
+        res.json(prez)
+    }))
+}
 
 module.exports = {
     getAll,
     getById,
     create,
     update,
-    remove
+    remove, 
+    addSection
 }
