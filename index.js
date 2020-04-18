@@ -4,7 +4,7 @@ const parser = require('body-parser')
 const cors = require('cors')
 const app = express()
 const presRoutes = require ('./routes/presRoutes')
-const sectionRoutes = require ('./routes/sectionRoutes')
+const sectionRoutes = require ('./routes/sectionRoute')
 const talkingPoint = require ('./routes/talkingPoint')
 
 app.use(parser.json())
