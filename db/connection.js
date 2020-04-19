@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 mongoose.Promise = Promise
 
-mongoose.connect('mongodb://localhost/presentationsdb', { useNewUrlParser: true })
 
 let mongoURI = ''
 if(process.env.NODE_ENV === "production") {
@@ -10,6 +9,7 @@ if(process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/presentationsdb"
 }
 
+mongoose.connect(mongoURI, { useNewUrlParser: true })
 module.exports = mongoose
 
 // heroku config:set ....
