@@ -1,33 +1,22 @@
-const Presentation = require('../models/presentation')
+const Model = require('../models/presentation')
 
 const getAll = (req, res) => {
-    Presentation.Presentation.find().then(prez => res.json(prez))
+    Model.Presentation.find().then(prez => res.json(prez))
 }
 
 const getById = (req, res) => {
-    Presentation.Presentation.findById(req.params.id).then(prez => res.json(prez))
+    Model.Presentation.findById(req.params.id).then(prez => res.json(prez))
 }
 
 const create = (req, res) => {
-    Presentation.Presentation.create(req.body).then(prez => res.json(prez))
+    Model.Presentation.create(req.body).then(prez => res.json(prez))
 }
 const update = (req, res) => {
-    Presentation.Presentation.findByIdAndUpdate(req.params.id, req.body).then(prez => res.json(prez))
+    Model.Presentation.findByIdAndUpdate(req.params.id, req.body).then(prez => res.json(prez))
 }
 
 const remove = (req, res) => {
-    Presentation.Presentation.remove({_id: req.params.id}).then(prez => res.json(prez))
-}
-const addSection = (req, res) => {
-    Presentation.Presentation.findById(req.params.id).then(prez => Presentation.Section.create(req.body).then(sect =>{
-        prez.sections.push(sect)
-        prez.save()
-        res.json(prez)
-    }))
-
- 
-
-
+    Model.Presentation.remove({_id: req.params.id}).then(prez => res.json(prez))
 }
 
 module.exports = {
@@ -35,6 +24,5 @@ module.exports = {
     getById,
     create,
     update,
-    remove, 
-    addSection
+    remove
 }

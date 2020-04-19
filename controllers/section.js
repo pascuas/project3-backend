@@ -1,55 +1,35 @@
-const Section = require('../models/presentation')
+const Model = require('../models/presentation')
 
-const getAll = (req, res) => {
-    Section.Section.find().then(sections => res.json(sections))
-}
+// const getAll = (req, res) => {
+//     Model.Section.find().then(sections => res.json(sections))
+// }
 
-const getById = (req, res) => {
-    Section.Section.findById(req.params.id).then(section => res.json(section))
-}
+// const getById = (req, res) => {
+//     Model.Section.findById(req.params.id).then(section => res.json(section))
+// }
 
 const create = (req, res) => {
-    Section.Section.create(req.body).then(section => res.json(section))
+    Model.Presentation.updateOne({_id:req.params.presId},{$push: {"sections": req.body}}).then(() => Model.Presentation.find().then(prez =>{
+        res.json(prez)}))
 }
+
 const update = (req, res) => {
-    Section.Section.findByIdAndUpdate(req.params.id, req.body).then(section => res.json(section))
+    Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId}, {"$set": {"sections.$": req.body}}).then(()=> Model.Presentation.find().then(prez =>{
+        res.json(prez)}))
 }
 
 const remove = (req, res) => {
-    Section.Section.remove({_id: req.params.id}).then(section => res.json(section))
+    Model.Presentation.findByIdAndUpdate(req.params.presId, {"$pull": {"sections": {_id:req.params.sectId}}}).then(() => Model.Presentation.find().then(prez =>{
+        res.json(prez)}))
 }
 
-const addTalkingPoint = (req, res) => {
-    Section.Section.findById(req.params.id).then(sect => Section.TalkingPoint.create(req.body).then(point=>{
-        sect.talking_points.push(point)
-        sect.save()
-        res.json(sect)
-        
-    }))
-
-}
-
-
-
-
-
-
-
-
-// const addSection = (req, res) => {
-//     Presentation.Presentation.findById(req.params.id).then(prez => Presentation.Section.create(req.body).then(sect =>{
-//         prez.sections.push(sect)
-//         prez.save()
-//         res.json(prez)
-//     }))
-// }
+// const removeAll = (req, res) => {
+//     Model.Section.deleteMany({}).then(sections=> res.json(sections))
+//
 
 
 module.exports = {
-    getAll,
-    getById,
     create,
     update,
-    remove,
-    addTalkingPoint
+    remove
 }
