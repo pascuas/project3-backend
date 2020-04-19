@@ -55,4 +55,4 @@ Model.Presentation.deleteMany().then(()=> Model.Presentation.create({"name": "Pr
         ]
     }
 
-]}).then(json => console.log(json).then(()=> process.exit())))
+]}).then(json => {console.log(json), process.exit()}))
