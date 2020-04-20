@@ -1,32 +1,36 @@
-const Talkingpoints = require('../models/presentation')
+const Model = require('../models/presentation')
 
 
-const getAll = (req, res) => {
-    Talkingpoints.TalkingPoint.find({}).then(talkingpoints=>{
-        res.json(talkingpoints)
-    })
-}
+// const getAll = (req, res) => {
+//     Talkingpoints.TalkingPoint.find().then(talkingpoints=>{
+//         res.json(talkingpoints)
+//     })
+// }
 
-const getById = (req, res) => {
-    Talkingpoints.TalkingPoint.findById(req.params.id).then(talkingpoints => res.json(talkingpoints))
-}
+// const getById = (req, res) => {
+//     Talkingpoints.TalkingPoint.findById(req.params.id).then(talkingpoints => res.json(talkingpoints))
+// }
 
 const create = (req, res) => {
-    Talkingpoints.TalkingPoint.create(req.body).then(talkingpoints =>res.json(talkingpoints))
-}
-
-const update = (req, res) => {
-    Talkingpoints.TalkingPoint.findByIdAndUpdate(req.params.id, req.body).then(talkingpoints => res.json(talkingpoints))
+    Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId},{$push: {"sections.$.talking_points": req.body}}).then(pre => Model.Presentation.find().then(prez =>{
+        res.json(prez)}))
 }
 
 const remove = (req, res) => {
-    Talkingpoints.TalkingPoint.remove({_id: req.params.id}).then(talkingpoints=> res.json(talkingpoints))
+    Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId}, {$pull: {"sections.$.talking_points": {_id: req.params.pointId}}}).then(pre => Model.Presentation.find().then(prez =>{
+        res.json(prez)}))
 }
 
+// const update = (req, res) => {
+//     Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId, "talking_points._id": req.params.pointId}, {$set: {"sections.$": {"talking_points.$": req.body}}}).then(pre => Model.Presentation.find().then(prez =>{
+//         res.json(prez)}))
+// }
+
+// const removeAll = (req, res) => {
+//     Talkingpoints.TalkingPoint.deleteMany({}).then(talkingpoints=> res.json(talkingpoints))
+// }
+
 module.exports ={
-    getAll,
-    getById,
     create,
-    update,
-    remove,
+    remove
 }
