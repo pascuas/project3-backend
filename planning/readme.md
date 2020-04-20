@@ -13,14 +13,14 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Git management | H | 8hrs | -hrs | -hrs |
+| Git management | H | 8hrs | 2hrs | -hrs |
 | Q&A and bug fixes | H | 4hrs | -hrs | -hrs |
-| Connection | H | 1hr | -hrs | -hrs |
-| Express  | H | 1hr | -hrs | -hrs |
-| Routes | H | 2hrs | -hrs | -hrs |
-| Controllers | H | 3hrs | -hrs | -hrs |
-| Seed | H | 4hrs | -hrs | -hrs |
-| Deployment | H | 2hrs | -hrs | -hrs |
+| Connection | H | 1hr | 1hrs | 2hrs |
+| Express  | H | 1hr | 1hrs | 1hrs |
+| Routes | H | 2hrs | 2hrs | 2hrs |
+| Controllers | H | 3hrs | 8hrs | 8hrs |
+| Seed | H | 4hrs | 1hrs | 1hrs |
+| Deployment | H | 2hrs | 1hrs | 1hrs |
 | Install and set up react router | H | 0.5hrs | -hrs | -hrs |
 | Switch, Links, Routes | H | 2hrs | -hrs | -hrs |
 | Header| H | 2hrs | -hrs | -hrs |
