@@ -1,16 +1,16 @@
 const Model = require('../models/presentation')
 
-// const getAll = (req, res) => {
-//     Model.Section.find().then(sections => res.json(sections))
-// }
+const getAll = (req, res) => {
+    Model.Section.find().then(sections => res.json(sections))
+}
 
-// const getById = (req, res) => {
-//     Model.Section.findById(req.params.id).then(section => res.json(section))
-// }
+const getById = (req, res) => {
+    Model.Section.findById(req.params.sectId).then(section => res.json(section))
+}
 
 const create = (req, res) => {
-    Model.Presentation.updateOne({_id:req.params.presId},{$push: {"sections": req.body}}).then(() => Model.Presentation.find().then(prez =>{
-        res.json(prez)}))
+    Model.Presentation.updateOne({_id:req.params.presId},{$push: {"sections": req.body}}).then(() => Model.Section.create(req.body).then( () => Model.Presentation.find().then(prez =>{
+        res.json(prez)})))
 }
 
 const update = (req, res) => {
@@ -29,6 +29,8 @@ const remove = (req, res) => {
 
 
 module.exports = {
+    getAll,
+    getById,
     create,
     update,
     remove
