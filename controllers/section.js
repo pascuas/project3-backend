@@ -11,21 +11,19 @@ const getById = (req, res) => {
 
 const create = (req, res) => {
     Section.create(req.body).then(sect => Presentation.findOne({_id:req.params.presId}).then(pres => {
-        pres.sections.push(sect)
+        pres.sections.push(sect._id)
         pres.save()
         res.json(pres)
     }))
 }
 
-// const update = (req, res) => {
-//     Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId}, {"$set": {"sections.$": req.body}}).then(()=> Model.Presentation.find().then(prez =>{
-//         res.json(prez)}))
-// }
+const update = (req, res) => {
+    Section.updateOne({_id: req.params.sectId}, {"$set": req.body}).then(sect => res.json(sect))
+}
 
-// const remove = (req, res) => {
-//     Model.Presentation.findByIdAndUpdate(req.params.presId, {"$pull": {"sections": {_id:req.params.sectId}}}).then(() => Model.Presentation.find().then(prez =>{
-//         res.json(prez)}))
-// }
+const remove = (req, res) => {
+    Section.remove({_id: req.params.sectId}).then(sect => res.json(sect))
+}
 
 const removeAll = (req, res) => {
     Section.deleteMany({}).then(sections=> res.json(sections))
@@ -35,5 +33,7 @@ module.exports = {
     getAll,
     getById,
     create,
+    update,
+    remove,
     removeAll
 }

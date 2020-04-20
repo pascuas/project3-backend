@@ -1,7 +1,7 @@
 const Presentation = require('../models/presentation')
 
 const getAll = (req, res) => {
-    Presentation.find({}).then(prez => res.json(prez))
+    Presentation.find({}).populate('sections').then(prez => res.json(prez))
 }
 
 const getById = (req, res) => {
