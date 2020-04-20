@@ -1,4 +1,5 @@
-const Model = require('../models/presentation')
+const TalkingPoint = require('../models/talkpoint')
+const Section = require('../models/section')
 
 
 // const getAll = (req, res) => {
@@ -12,13 +13,15 @@ const Model = require('../models/presentation')
 // }
 
 const create = (req, res) => {
-    Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId},{$push: {"sections.$.talking_points": req.body}}).then(pre => Model.Presentation.find().then(prez =>{
-        res.json(prez)}))
+    TalkingPoint.create(req.body).then(point => Section.findOne({_id:req.params.sectId}).then(sect => {
+        sect.talking_points.push(point._id)
+        sect.save()
+        res.json(sect)
+    }))
 }
 
 const remove = (req, res) => {
-    Model.Presentation.updateOne({_id: req.params.presId, "sections._id": req.params.sectId}, {$pull: {"sections.$.talking_points": {_id: req.params.pointId}}}).then(pre => Model.Presentation.find().then(prez =>{
-        res.json(prez)}))
+    TalkingPoint.remove({_id: req.params.presId}).then(point => res.json(point))
 }
 
 // const update = (req, res) => {
