@@ -6,7 +6,7 @@ const getAll = (req, res) => {
 }
 
 const getById = (req, res) => {
-    Section.findById(req.params.sectId).then(section => res.json(section))
+    Section.findById(req.params.sectId).populate('talking_points').then(section => res.json(section))
 }
 
 const create = (req, res) => {
