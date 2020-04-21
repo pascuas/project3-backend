@@ -2,7 +2,7 @@ const Section = require('../models/section')
 const Presentation = require('../models/presentation')
 
 const getAll = (req, res) => {
-    Section.find({}).then(sections => res.json(sections))
+    Section.find({}).populate('talking_points').then(sections => res.json(sections))
 }
 
 const getById = (req, res) => {

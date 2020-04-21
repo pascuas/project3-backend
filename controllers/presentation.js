@@ -1,11 +1,25 @@
 const Presentation = require('../models/presentation')
 
 const getAll = (req, res) => {
-    Presentation.find({}).populate('sections').then(prez => res.json(prez))
+    Presentation.find({}).populate('sections').populate({
+        path: 'sections',
+        model: 'Section',
+        populate: {
+          path: 'talking_points',
+          model: 'Talkingpoint'
+        }
+      }).then(prez => res.json(prez))
 }
 
 const getById = (req, res) => {
-    Presentation.findById(req.params.id).populate('sections').then(prez => res.json(prez))
+    Presentation.findById(req.params.id).populate('sections').populate('sections').populate({
+        path: 'sections',
+        model: 'Section',
+        populate: {
+          path: 'talking_points',
+          model: 'Talkingpoint'
+        }
+      }).then(prez => res.json(prez))
 }
 
 const create = (req, res) => {
