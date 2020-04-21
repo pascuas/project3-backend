@@ -13,28 +13,28 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Git management | H | 8hrs | 2hrs | -hrs |
-| Q&A and bug fixes | H | 4hrs | -hrs | -hrs |
+| Git management | H | 8hrs | 6hrs | -hrs |
+| Q&A and bug fixes | H | 4hrs | 4hrs | -hrs |
 | Connection | H | 1hr | 1hrs | 2hrs |
 | Express  | H | 1hr | 1hrs | 1hrs |
 | Routes | H | 2hrs | 2hrs | 2hrs |
 | Controllers | H | 3hrs | 8hrs | 8hrs |
 | Seed | H | 4hrs | 1hrs | 1hrs |
 | Deployment | H | 2hrs | 1hrs | 1hrs |
-| Install and set up react router | H | 0.5hrs | -hrs | -hrs |
-| Switch, Links, Routes | H | 2hrs | -hrs | -hrs |
-| Header| H | 2hrs | -hrs | -hrs |
-| Home Display List from Backend | H | 4hrs | -hrs | -hrs |
-| Home CRUD options | H | 6hrs | -hrs | -hrs |
-| Form | H | 5hrs | -hrs | -hrs |
-| Connecting Form to backend | H | 4hrs | -hrs | -hrs |
-| Presentation Outline | H | 4hrs| -hrs | -hrs |
-| Timer | H | 8hrs | -hrs | -hrs |
+| Install and set up react router | H | 0.5hrs | 0.5hrs | 0.5hrs |
+| Switch, Links, Routes | H | 2hrs | 1hrs | 1hrs |
+| Header| H | 2hrs | 1hrs | -hrs |
+| Home Display List from Backend | H | 4hrs | 1hrs | 1hrs |
+| Home CRUD options | H | 6hrs | 1hrs | -hrs |
+| Form | H | 5hrs | 10hrs | 10hrs |
+| Connecting Form to backend | H | 4hrs | 6hrs | 6hrs |
+| Presentation Outline | H | 4hrs| 1hrs | 1hrs |
+| Timer | H | 8hrs | 3hrs | -hrs |
 | Talking point synchronized timer | H | 4hr s| -hrs | -hrs |
 | Responsiveness | H | 5hrs | -hrs | -hrs |
 | Progress Bar | L | 5hrs | -hrs | -hrs |
 | Timer Interface | L | 4hrs | -hrs | -hrs |
-| Dark mode/lightmode | L | 1hrs| -hrs | -hrs |
+| Dark mode/lightmode | L | 1hrs| 3hrs | 3hrs |
 | Extra Styling | L | 2hrs | -hrs | -hrs |
 | Talking points drop down menu | L | 2hrs | -hrs | -hrs |
 | Confetti | L | 2hrs | -hrs | -hrs |
