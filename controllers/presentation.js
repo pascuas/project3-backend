@@ -5,7 +5,7 @@ const getAll = (req, res) => {
 }
 
 const getById = (req, res) => {
-    Presentation.findById(req.params.id).then(prez => res.json(prez))
+    Presentation.findById(req.params.id).populate('sections').then(prez => res.json(prez))
 }
 
 const create = (req, res) => {
