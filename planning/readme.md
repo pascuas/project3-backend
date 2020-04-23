@@ -13,7 +13,7 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Git management | H | 8hrs | 6hrs | -hrs |
+| Git management | H | 8hrs | 7hrs | 7hrs |
 | Q&A and bug fixes | H | 4hrs | 4hrs | -hrs |
 | Connection | H | 1hr | 1hrs | 2hrs |
 | Express  | H | 1hr | 1hrs | 1hrs |
@@ -25,17 +25,17 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 | Switch, Links, Routes | H | 2hrs | 1hrs | 1hrs |
 | Header| H | 2hrs | 1hrs | -hrs |
 | Home Display List from Backend | H | 4hrs | 1hrs | 1hrs |
-| Home CRUD options | H | 6hrs | 1hrs | -hrs |
-| Form | H | 5hrs | 10hrs | 10hrs |
+| CRUD options | H | 6hrs | 18hrs | -hrs |
+| Create Form | H | 5hrs | 10hrs | 10hrs |
 | Connecting Form to backend | H | 4hrs | 6hrs | 6hrs |
 | Presentation Outline | H | 4hrs| 1hrs | 1hrs |
-| Timer | H | 8hrs | 3hrs | -hrs |
+| Timer | H | 8hrs | 7hrs | 7hrs |
 | Talking point synchronized timer | H | 4hr s| -hrs | -hrs |
-| Responsiveness | H | 5hrs | -hrs | -hrs |
-| Progress Bar | L | 5hrs | -hrs | -hrs |
+| Responsiveness | H | 5hrs | 4hrs | -hrs |
+| Progress Bar | L | 5hrs | 1hrs | 1hrs |
 | Timer Interface | L | 4hrs | -hrs | -hrs |
 | Dark mode/lightmode | L | 1hrs| 3hrs | 3hrs |
-| Extra Styling | L | 2hrs | -hrs | -hrs |
+| Extra Styling | L | 2hrs | 1hrs | -hrs |
 | Talking points drop down menu | L | 2hrs | -hrs | -hrs |
 | Confetti | L | 2hrs | -hrs | -hrs |
 | Alert | L | 1hrs| -hrs | -hrs |
