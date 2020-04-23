@@ -21,7 +21,7 @@ const create = (req, res) => {
 }
 
 const remove = (req, res) => {
-    TalkingPoint.remove({_id: req.params.presId}).then(point => res.json(point))
+    TalkingPoint.remove({_id: req.params.pointId}).then(point => res.json(point))
 }
 
 const update = (req, res) => {
