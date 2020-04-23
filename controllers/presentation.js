@@ -12,7 +12,7 @@ const getAll = (req, res) => {
 }
 
 const getById = (req, res) => {
-    Presentation.findById(req.params.id).populate('sections').populate('sections').populate({
+    Presentation.findById(req.params.id).populate('sections').populate({
         path: 'sections',
         model: 'Section',
         populate: {
