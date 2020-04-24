@@ -71,7 +71,7 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 - Talking points drop down menu
 - Animated timer
 - Multiple use timer (save and use schema again)
-- Event when timer runs out (like confetti, alert, message) and also a way to turn it off
+
 ## Components - Descriptions
 - React hooks, states, etc
 - Routes
@@ -95,4 +95,37 @@ Ever given a presentation and you've lost track of time? Well, here is a  multi-
 - Node
 - Express
 ## Code Snippet
+```
+    const [time, setTime] = useState({ms:0, s:59, m:0, h:0})
+    const [interv, setInterv] = useState();
+    const [status, setStatus] = useState(0);
+ 
+    useEffect(()=>{
+        start()
+    },[])
 
+    const start = () => {
+        run();
+        setStatus(1)
+        setInterv(setInterval(run, 10));
+    };
+
+    let updatedMs = time.ms, updatedS = time.s, updatedM = time.m, updatedH = time.h;
+
+    const run = () => {
+        if(updatedM === 60){
+            updatedH++;
+            updatedM = 0;
+        }
+        if(updatedS === 60) {
+            updatedM++;
+            updatedS = 0;
+        }
+        if(updatedMs === 100) {
+            updatedS++;
+            updatedMs = 0;
+        }
+        updatedMs++;
+        return setTime({ms:updatedMs, s:updatedS, m:updatedM, h:updatedH})
+    };
+```
